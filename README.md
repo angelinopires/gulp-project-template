@@ -58,13 +58,6 @@ The package.json of this workflow was builded to give you more productivity and 
 
 
 
-### About:
-
-The original workflow was very tricky, that's why I decided to change and simplify everything. For now, only the development script was created, and I have plans to modify and improve the Deploy script as well.
-
-If you have better gulp tasks, hints or anything else, open a Pull Request :)   
-
-
 ### Folder Struct:
 
 ```
@@ -103,6 +96,16 @@ If you have better gulp tasks, hints or anything else, open a Pull Request :)
 │   └── json
 └── yarn.lock
 ```
+
+
+
+### About:
+
+The original workflow was very tricky, that's why I decided to change and simplify everything. For now, only the development script was created, and I have plans to modify and improve the Deploy script as well.
+
+If you have better gulp tasks, hints or anything else, open a Pull Request :)   
+
+
 
 ### Changelog
 
