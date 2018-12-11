@@ -1,48 +1,68 @@
-## Workflow para front-end usando Gulp
+## A Workflow to front-end with Gulp.js
 
 
 
-Toda a estrutura deste workflow foi baseada nesse artigo: https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation
+All the structure of this workflow was based on this article: ``https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation``
 
-### Pré-requisitos:
 
-* OS Windows: é preciso do Node.js e o NPM:
+
+### What do you need:
+
+
+* OS Windows: You should install Node.js and NPM:
 `` https://nodejs.org/en/download/ ``
 
 
 
-* OS Linux: é preciso do Node.js, NPM e NVM:
+* OS Linux: You'll need Node.js, NPM and NVM:
 ``https://medium.com/collabcode/como-instalar-node-js-no-linux-corretamente-ubuntu-debian-elementary-os-729fb4c92f2d``
 
 
 
-* OS Windows/Linux: Caso não tenha o Gulp, instale-o globalmente:
+* OS Windows/Linux: If you don't have gulp.js, install it globally:
 ``npm install gulp -g``
 
 
 
-### Instalação:
+### Almost there, just a few things before
 
-Após clonar o projeto você irá precisar realizar os itens abaixo:
+The package.json of this workflow was builded to give you more productivity and time to develop more and more consistent. Therefore, you just need to change a few inputs:
 
-* Baixe o projeto e use:
-``npm install``
+* Insert your project name on the "name" field;
+* Insert your project descripton on the "description" field;
+* At the repository field, insert your project URL at "url";
 
-* Para rodar o projeto:
+
+
+### Setup:
+
+* Get the project:
+``git clone https://github.com/angelinopires/A-workflow-to-front-end.git``
+
+* Move to the folder and then install all dependencies:
+``cd A-workflow-to-front-end; npm install ``
+
+* To run the project, use:
 ``gulp``
+
+
 
 ### Comandos:
 
-``gulp -> build básico para o desenvolvimento do cotidiano``
+``gulp -> basic command to run and watch your changes``
 
-``gulp imagemin -> Minifica imagens, mantendo a proporção e diminuindo o tamanho``
-
-### Sobre:
-
-Apesar do artigo citado acima possuir um Script muito mais completo, ele também te deixa mais confuso. O que eu fiz foi abstrair o necessário para o desenvolvimento cotidiano de seu front-end e atualizar algumas dependências que eram necessárias.
+``gulp imagemin -> Minify images``
 
 
-### Estrutura de pastas:
+
+### About:
+
+The original workflow was very tricky, that's why I decided to change and simplify everything. For now, only the development script was created, and I have plans to modify and improve the Deploy script as well.
+
+If you have better gulp tasks, hints or anything else, open a Pull Request :)   
+
+
+### Folder Struct:
 
 ```
 
@@ -83,4 +103,4 @@ Apesar do artigo citado acima possuir um Script muito mais completo, ele também
 
 ### Changelog
 
-* 11/12/2018 - O básico necessário foi criado. Ainda irei adicionar outras features e um servidor local para o desenvolvimento.
+* 11/12/2018 - Only the basic script was created. I still need to test on Linux OS and create a local server.
