@@ -29,9 +29,10 @@ All the structure of this workflow was based on this article: ``https://nystudio
 The package.json of this workflow was builded to give you more productivity and time to develop more and more consistent. Therefore, you just need to change a few inputs:
 
 * Insert your project name on the "name" field;
-* Insert your project descripton on the "description" field;
-* At the repository field, insert your project URL at "url";
 
+* Insert your project descripton on the "description" field;
+
+* At the repository field, insert your project URL at "url";
 
 
 ### Setup:
@@ -45,9 +46,11 @@ The package.json of this workflow was builded to give you more productivity and 
 * To run the project, use:
 ``gulp``
 
+* Access http://localhost:8080/index.html to see your webpage.
 
 
-### Comandos:
+
+### Commands:
 
 ``gulp -> basic command to run and watch your changes``
 
@@ -102,5 +105,7 @@ If you have better gulp tasks, hints or anything else, open a Pull Request :)
 ```
 
 ### Changelog
+
+* 11/12/2018 - Local server added with gulp-connect. Access via: http://localhost:8080/index.html
 
 * 11/12/2018 - Only the basic script was created. I still need to test on Linux OS and create a local server.

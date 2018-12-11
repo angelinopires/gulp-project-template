@@ -9,6 +9,13 @@ const onError = (err) => {
     console.log(err);
 };
 
+gulp.task("html", () => {
+    $.fancyLog("-> Copying HTML...")
+    return gulp.src(pkg.paths.src.base + "**/*.html")
+        .pipe(gulp.dest(pkg.paths.dist.base))
+        .pipe($.connect.reload());
+});
+
 gulp.task("sass", () => {
     $.fancyLog('-> Compiling SCSS to CSS...');    
 
@@ -45,7 +52,7 @@ gulp.task("css", ["sass"], () => {
         .pipe($.size({gzip: true, showFiles: true}))
         .pipe(gulp.dest(pkg.paths.dist.css))
         .pipe($.filter("**/*.css"))
-        .pipe($.livereload());
+        .pipe($.connect.reload());
 });
 
 gulp.task("babel", () => {
@@ -81,7 +88,7 @@ gulp.task("js", ["babel"], () => {
         .pipe($.size({gzip: true, showFiles: true}))
         .pipe(gulp.dest(pkg.paths.dist.js))
         .pipe($.filter("**/*.js"))
-        .pipe($.livereload());
+        .pipe($.connect.reload());
 });
 
 gulp.task("imagemin", () => {
@@ -99,14 +106,16 @@ gulp.task("imagemin", () => {
         .pipe(gulp.dest(pkg.paths.dist.img));
 });
 
-gulp.task("html", () => {
-    $.fancyLog("-> Copying HTML...")
-    return gulp.src(pkg.paths.src.base + "**/*.html")
-        .pipe(gulp.dest(pkg.paths.dist.base));
+gulp.task("server", () => {
+    $.connect.server({
+        name: 'Development Environment',
+        port: 8080,
+        root: 'dist',
+        livereload: true
+    });
 });
 
-gulp.task('default', ['html', 'css', 'js'], () => {
-    $.livereload.listen()
+gulp.task('default', ['html', 'css', 'js', 'server'], () => {
     gulp.watch([pkg.paths.src.scss + "**/*.scss"], ["css"]);
     gulp.watch([pkg.paths.src.css + "**/*.css"], ["css"]);
     gulp.watch([pkg.paths.src.js + "**/*.js"], ["js"]);
