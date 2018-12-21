@@ -2,20 +2,18 @@
 
 
 
-All the structure of this workflow was based on this article: ``https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation``
+All the structure of this workflow was based on this article: https://nystudio107.com/blog/a-gulp-workflow-for-frontend-development-automation
 
 
 
 ### What do you need:
 
 
-* OS Windows: You should install Node.js and NPM:
-`` https://nodejs.org/en/download/ ``
+* OS Windows: You should install Node.js and NPM: https://nodejs.org/en/download/
 
 
 
-* OS Linux: You'll need Node.js, NPM and NVM:
-``https://medium.com/collabcode/como-instalar-node-js-no-linux-corretamente-ubuntu-debian-elementary-os-729fb4c92f2d``
+* OS Linux: You'll need Node.js, NPM and NVM: https://medium.com/collabcode/como-instalar-node-js-no-linux-corretamente-ubuntu-debian-elementary-os-729fb4c92f2d
 
 
 
